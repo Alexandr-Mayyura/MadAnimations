@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F33B1B529105B2E001B5899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F33B1B429105B2E001B5899 /* AppDelegate.swift */; };
 		1F33B1B729105B2E001B5899 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F33B1B629105B2E001B5899 /* SceneDelegate.swift */; };
-		1F33B1B929105B2E001B5899 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F33B1B829105B2E001B5899 /* ViewController.swift */; };
+		1F33B1B929105B2E001B5899 /* PresentAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F33B1B829105B2E001B5899 /* PresentAnimationViewController.swift */; };
 		1F33B1BC29105B2E001B5899 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F33B1BA29105B2E001B5899 /* Main.storyboard */; };
 		1F33B1BE29105B30001B5899 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F33B1BD29105B30001B5899 /* Assets.xcassets */; };
 		1F33B1C129105B30001B5899 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F33B1BF29105B30001B5899 /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 		1F33B1B129105B2E001B5899 /* MadAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MadAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F33B1B429105B2E001B5899 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F33B1B629105B2E001B5899 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1F33B1B829105B2E001B5899 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F33B1B829105B2E001B5899 /* PresentAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentAnimationViewController.swift; sourceTree = "<group>"; };
 		1F33B1BB29105B2E001B5899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F33B1BD29105B30001B5899 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F33B1C029105B30001B5899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,17 +62,57 @@
 		1F33B1B329105B2E001B5899 /* MadAnimations */ = {
 			isa = PBXGroup;
 			children = (
-				1F6FAD2E291164090000CAE1 /* DataStore.swift */,
-				1F6FAD3029118D650000CAE1 /* Animations.swift */,
-				1F33B1B429105B2E001B5899 /* AppDelegate.swift */,
-				1F33B1B629105B2E001B5899 /* SceneDelegate.swift */,
-				1F33B1B829105B2E001B5899 /* ViewController.swift */,
-				1F33B1BA29105B2E001B5899 /* Main.storyboard */,
+				1F6FAD332911C6310000CAE1 /* Services */,
+				1F6FAD342911C6460000CAE1 /* Models */,
+				1F6FAD352911C65D0000CAE1 /* App */,
+				1F6FAD322911C6110000CAE1 /* ViewControllers */,
+				1F6FAD362911C66B0000CAE1 /* Storyboards */,
 				1F33B1BD29105B30001B5899 /* Assets.xcassets */,
-				1F33B1BF29105B30001B5899 /* LaunchScreen.storyboard */,
-				1F33B1C229105B30001B5899 /* Info.plist */,
 			);
 			path = MadAnimations;
+			sourceTree = "<group>";
+		};
+		1F6FAD322911C6110000CAE1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F33B1B829105B2E001B5899 /* PresentAnimationViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1F6FAD332911C6310000CAE1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1F6FAD2E291164090000CAE1 /* DataStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1F6FAD342911C6460000CAE1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1F6FAD3029118D650000CAE1 /* Animations.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1F6FAD352911C65D0000CAE1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1F33B1B429105B2E001B5899 /* AppDelegate.swift */,
+				1F33B1B629105B2E001B5899 /* SceneDelegate.swift */,
+				1F33B1C229105B30001B5899 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1F6FAD362911C66B0000CAE1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1F33B1BA29105B2E001B5899 /* Main.storyboard */,
+				1F33B1BF29105B30001B5899 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F33B1B929105B2E001B5899 /* ViewController.swift in Sources */,
+				1F33B1B929105B2E001B5899 /* PresentAnimationViewController.swift in Sources */,
 				1F6FAD2F291164090000CAE1 /* DataStore.swift in Sources */,
 				1F33B1B529105B2E001B5899 /* AppDelegate.swift in Sources */,
 				1F33B1B729105B2E001B5899 /* SceneDelegate.swift in Sources */,
@@ -305,7 +345,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 22NTM9AJGF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MadAnimations/Info.plist;
+				INFOPLIST_FILE = MadAnimations/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -333,7 +373,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 22NTM9AJGF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MadAnimations/Info.plist;
+				INFOPLIST_FILE = MadAnimations/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

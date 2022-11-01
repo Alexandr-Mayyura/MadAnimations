@@ -21,9 +21,9 @@ struct Animations {
         let animations = Animations(
             preset: animationSpring.animations.randomElement() ?? "",
             curve: animationSpring.curves.randomElement() ?? "",
-            duration: CGFloat.random(in: 0.9...1.4),
-            damping: CGFloat.random(in: 0.8...1),
-            velocity: CGFloat.random(in: 0.2...0.5)
+            duration: CGFloat.random(in: 1...1.4),
+            damping: CGFloat.random(in: 0.9...1.2),
+            velocity: CGFloat.random(in: 0.8...1.5)
         )
         return animations
     }
