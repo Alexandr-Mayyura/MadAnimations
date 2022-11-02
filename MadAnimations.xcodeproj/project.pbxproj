@@ -15,7 +15,7 @@
 		1F33B1C129105B30001B5899 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F33B1BF29105B30001B5899 /* LaunchScreen.storyboard */; };
 		1F33B1CA29105BA2001B5899 /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 1F33B1C929105BA2001B5899 /* SpringAnimation */; };
 		1F6FAD2F291164090000CAE1 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6FAD2E291164090000CAE1 /* DataStore.swift */; };
-		1F6FAD3129118D650000CAE1 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6FAD3029118D650000CAE1 /* Animations.swift */; };
+		1F6FAD3129118D650000CAE1 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6FAD3029118D650000CAE1 /* Animation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		1F33B1C029105B30001B5899 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F33B1C229105B30001B5899 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F6FAD2E291164090000CAE1 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
-		1F6FAD3029118D650000CAE1 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		1F6FAD3029118D650000CAE1 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +91,7 @@
 		1F6FAD342911C6460000CAE1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1F6FAD3029118D650000CAE1 /* Animations.swift */,
+				1F6FAD3029118D650000CAE1 /* Animation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,7 +196,7 @@
 				1F6FAD2F291164090000CAE1 /* DataStore.swift in Sources */,
 				1F33B1B529105B2E001B5899 /* AppDelegate.swift in Sources */,
 				1F33B1B729105B2E001B5899 /* SceneDelegate.swift in Sources */,
-				1F6FAD3129118D650000CAE1 /* Animations.swift in Sources */,
+				1F6FAD3129118D650000CAE1 /* Animation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

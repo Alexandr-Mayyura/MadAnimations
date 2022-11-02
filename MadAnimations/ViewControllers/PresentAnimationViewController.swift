@@ -18,62 +18,64 @@ class PresentAnimationViewController: UIViewController {
     
     @IBOutlet var animatedView: SpringView!
     
-    let animations = Animations.getAnimations()
+    private let startAnimation = Animation.getAnimations()
     
-    private var nowAnimate = ""
-    private var isTappedButton = false
+    private var futureAnimation = ""
+    private var isButtonPressed = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         animatedView.layer.cornerRadius = 10
-        
-        presetLabel.text = animations.preset
-        curveLabel.text = animations.curve
-        durationLabel.text = string(from: animations.duration)
-        dampingLabel.text = string(from: animations.damping)
-        velocityLabel.text = string(from: animations.velocity)
+        getValueForLabelsFrom(animation: startAnimation)
     }
-
-    @IBAction func animatedViewTapped(_ sender: UIButton) {
-        animatedView.animation = nowAnimate
-        let randomAnimate = Animations.getAnimations()
+    
+    @IBAction func animateViewOnTapped(_ sender: UIButton) {
+        animatedView.animation = futureAnimation
         
-        if isTappedButton {
-            animatedView.curve = randomAnimate.curve
-            animatedView.duration = randomAnimate.duration
-            animatedView.damping = randomAnimate.damping
-            animatedView.velocity = randomAnimate.velocity
-            animatedView.animate()
-            getValueFromLabels()
+        let randomAnimation = Animation.getAnimations()
+        if isButtonPressed {
             
-            nowAnimate = randomAnimate.preset
-            
+            getAnimation(from: randomAnimation)
+            getValueForLabelsFrom(springView: animatedView)
+            futureAnimation = randomAnimation.preset
         } else {
-            animatedView.animation = animations.preset
-            animatedView.curve = animations.curve
-            animatedView.duration = animations.duration
-            animatedView.damping = animations.damping
-            animatedView.velocity = animations.velocity
-            animatedView.animate()
+            animatedView.animation = startAnimation.preset
+            getAnimation(from: startAnimation)
             
-            nowAnimate = randomAnimate.preset
-            isTappedButton = true
+            futureAnimation = randomAnimation.preset
+            isButtonPressed = true
         }
-        
-        sender.setTitle("Run \(nowAnimate)", for: .normal)
+        sender.setTitle("Run \(futureAnimation)", for: .normal)
     }
-
-    private func getValueFromLabels() {
-        presetLabel.text = animatedView.animation
-        curveLabel.text = animatedView.curve
-        durationLabel.text = string(from: animatedView.duration)
-        dampingLabel.text = string(from: animatedView.damping)
-        velocityLabel.text = string(from: animatedView.velocity)
+    
+    private func getAnimation(from animation: Animation) {
+        animatedView.curve = animation.curve
+        animatedView.duration = animation.duration
+        animatedView.damping = animation.damping
+        animatedView.velocity = animation.velocity
+        animatedView.animate()
     }
-
+    
+    private func getValueForLabelsFrom(animation: Animation? = nil, springView: SpringView? = nil) {
+        if animation != nil {
+            guard let animation = animation else { return }
+            presetLabel.text = animation.preset
+            curveLabel.text = animation.curve
+            durationLabel.text = string(from: animation.duration)
+            dampingLabel.text = string(from: animation.damping)
+            velocityLabel.text = string(from: animation.velocity)
+        } else {
+            guard let springView = springView else { return }
+            presetLabel.text = springView.animation
+            curveLabel.text = springView.curve
+            durationLabel.text = string(from: springView.duration)
+            dampingLabel.text = string(from: springView.damping)
+            velocityLabel.text = string(from: springView.velocity)
+        }
+    }
+    
     private func string(from value: CGFloat) -> String {
         String(format: "%.2f", value)
     }
-
 }
 

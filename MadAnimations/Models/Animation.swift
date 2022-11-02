@@ -7,18 +7,18 @@
 
 import Foundation
 
-struct Animations {
+struct Animation {
     let preset: String
     let curve: String
     let duration: CGFloat
     let damping: CGFloat
     let velocity: CGFloat
 
-    static func getAnimations() -> Animations {
+    static func getAnimations() -> Animation {
         
         let animationSpring = AnimationSpring()
         
-        let animations = Animations(
+        let animations = Animation(
             preset: animationSpring.animations.randomElement() ?? "",
             curve: animationSpring.curves.randomElement() ?? "",
             duration: CGFloat.random(in: 1...1.4),
