@@ -5,68 +5,16 @@
 //  Created by Aleksandr Mayyura on 01.11.2022.
 //
 
-import Foundation
+import SpringAnimation
 
-class AnimationSpring {
-    let animations = [
-        "pop",
-        "slideLeft",
-        "slideRight",
-        "slideDown",
-        "slideUp",
-        "squeezeLeft",
-        "squeezeRight",
-        "squeezeDown",
-        "squeezeUp",
-        "fadeIn",
-        "fadeOut",
-        "fadeOutIn",
-        "fadeInLeft",
-        "fadeInRight",
-        "fadeInDown",
-        "fadeInUp",
-        "zoomIn",
-        "zoomOut",
-        "shake",
-        "flipX",
-        "flipY",
-        "morph",
-        "squeeze",
-        "wobble",
-        "swing",
-        "flash",
-        "fall"
-    ].shuffled()
+class DataStore {
     
-    let curves = [
-        "easeIn",
-        "easeOut",
-        "easeInOut",
-        "linear",
-        "spring",
-        "easeInSine",
-        "easeOutSine",
-        "easeInOutSine",
-        "easeInQuad",
-        "easeOutQuad",
-        "easeInOutQuad",
-        "easeInCubic",
-        "easeOutCubic",
-        "easeInOutCubic",
-        "easeInQuart",
-        "easeOutQuart",
-        "easeInOutQuart",
-        "easeInQuint",
-        "easeOutQuint",
-        "easeInOutQuint",
-        "easeInExpo",
-        "easeOutExpo",
-        "easeInOutExpo",
-        "easeInCirc",
-        "easeOutCirc",
-        "easeInOutCirc",
-        "easeInBack",
-        "easeOutBack",
-        "easeInOutBack"
-    ].shuffled()
+   static let shared = DataStore()
+    
+    let animations = AnimationPreset.allCases
+    let curves = AnimationCurve.allCases
+    
+    private init(){
+        
+    }
 }
